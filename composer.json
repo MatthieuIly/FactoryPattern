@@ -15,7 +15,8 @@
             "App\\": "src/",
             "App\\Pizza\\": "src/pizza/",
             "App\\Pizzeria\\": "src/pizzeria/",
-            "App\\Factory\\": "src/factory/"
+            "App\\Factory\\": "src/factory/",
+            "App\\Ingredients\\": "src/ingredients/"
         }
     },
     "autoload-dev": {
