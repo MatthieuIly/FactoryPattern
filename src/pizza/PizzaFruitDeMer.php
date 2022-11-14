@@ -2,10 +2,10 @@
 
 namespace App\Pizza;
 
-class PizzaGrecque extends Pizza
+class PizzaFruitDeMer extends Pizza
 {
     public function __construct()
     {
-        echo "Pizza Grecque \n";
+        echo "Pizza Fruit de mer \n";
     }
 }
