@@ -1,6 +1,9 @@
 <?php
 
+use App\Factory\SimpleFabriqueDePizza;
+
 require __DIR__ . '/../vendor/autoload.php';
 
-$maBoutique = new \App\MaBoutique();
-$maBoutique->commanderPizza();
+$simpleFabriqueDePizza = new SimpleFabriqueDePizza();
+$pizzeria = new \App\Pizzeria($simpleFabriqueDePizza);
+$pizzeria->commanderPizza("fromage");

@@ -1,11 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Factory;
 
-class MaBoutique
+use App\Pizza\Pizza;
+use App\Pizza\PizzaFromage;
+use App\Pizza\PizzaGrecque;
+use App\Pizza\PizzaPoivron;
+
+class SimpleFabriqueDePizza
 {
-    public function commanderPizza(string $type): Pizza
+    public function creerPizza(string $type): Pizza|null
     {
+        $pizza = null;
+
         if ($type == 'fromage') {
             $pizza = new PizzaFromage();
         } elseif ($type == "grecque") {
@@ -13,11 +20,6 @@ class MaBoutique
         } elseif ($type == "poivron") {
             $pizza = new PizzaPoivron();
         }
-
-        $pizza->preparer();
-        $pizza->cuire();
-        $pizza->couper();
-        $pizza->emballer();
         return $pizza;
     }
 }
